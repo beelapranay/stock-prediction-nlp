@@ -42,3 +42,16 @@ Place these CSVs alongside `final_master.ipynb`:
    - Wrap test data in a custom Gym env and train multiple PPO agents  
    - Select & evaluate the best policy  
 
+
+## 📝 Paper Trading with Alpaca
+
+To place real paper trades using the PPO agent, install Alpaca's SDK:
+
+```bash
+pip install alpaca-trade-api
+```
+
+Set your Alpaca API key and secret in `alpaca_paper_trade.py`. The script defines an `AlpacaPaperTrader` helper used by the environment. When the agent goes long or short, an order will be submitted to the Alpaca paper endpoint.
+
+See the comments in `alpaca_paper_trade.py` for details.
+
